@@ -26,3 +26,14 @@ header {
     background-color: var(--primary);
     color: var(--white);
 }
+
+ header .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+ }
+
+ 
