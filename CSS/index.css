@@ -1,0 +1,13 @@
+:root {
+    --primary: #253645;
+    --background: #f4f6f9;
+    --white: #fff;
+    --text: #253645;
+    --accent: #1a2530;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
