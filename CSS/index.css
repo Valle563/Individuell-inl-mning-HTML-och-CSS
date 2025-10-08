@@ -89,10 +89,28 @@ header h1 {
  nav a:hover {
     background: var(--accent);
  }
+
+section h2, p{
+   display: grid;
+   justify-content: center;
+}
+.seminar-list {
+   display: grid;
+   justify-items: center;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1.5rem;
+   margin-top: 1rem;
+}
+
+
+
  form {
 	border: 2px solid var(--color-1);
 	border-radius: 0.4em;
 	padding: 1.3em;
+   display: grid;
+   justify-content: center;
+   gap: 10px;
 }
 
 .form-field {
@@ -118,15 +136,10 @@ input[type="checkbox"] {
 }  
 
 
-
-
-
-
-
-
-
-
-
+footer {
+   background-color: var(--primary);
+   color: var(--white);
+}
 
 
 @media (max-width: 700px) {
@@ -143,3 +156,22 @@ input[type="checkbox"] {
    justify-self: center;
 }
 }
+
+@media (max-width: 900px) {
+   .seminar-list {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+@media (max-width: 600px) {
+   .seminar-list {
+      grid-template-columns: 1fr;
+   }
+   .nav {
+      grid-auto-flow: row;
+      gap: 5px;
+      justify-content: center;
+      align-items: start;
+      text-align: center;
+   }
+}
+
