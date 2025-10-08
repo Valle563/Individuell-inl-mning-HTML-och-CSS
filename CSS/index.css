@@ -4,6 +4,7 @@
     --white: #fff;
     --text: #253645;
     --accent: #1a2530;
+    --beige: rgb(245, 245, 220);
 }
 
 * {
@@ -94,7 +95,11 @@ section h2, p{
    display: grid;
    justify-content: center;
 }
+section h2 {
+   margin-top: 40px;
+}
 .seminar-list {
+   background-color: var(--beige);
    display: grid;
    justify-items: center;
    grid-template-columns: repeat(3, 1fr);
@@ -141,6 +146,7 @@ input[type="checkbox"] {
 footer {
    background-color: var(--primary);
    color: var(--white);
+   margin-top: 40px;
 }
 
 
