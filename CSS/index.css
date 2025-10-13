@@ -90,6 +90,7 @@ background: var(--accent);
    position: relative;
    height: 100vh;
    background: url(../images/ai-conference-scaled.jpg) center / cover no-repeat;
+   box-shadow: var(--shadow);
 }
 .hero-text {
    color: var(--white);
@@ -123,8 +124,8 @@ background: var(--accent);
    gap: 1.5rem;
    margin-top: 5em;
    margin-bottom: 7em;
-   margin-left: 3em;
-   margin-right: 3em;
+   margin-left: 15em;
+   margin-right: 15em;
    box-shadow: var(--shadow);
 }
 
