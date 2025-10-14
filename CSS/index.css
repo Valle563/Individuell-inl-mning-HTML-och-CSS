@@ -4,84 +4,195 @@
     --white: #fff;
     --text: #253645;
     --accent: #1a2530;
+    --beige: rgb(245, 245, 220);
+    --bodybackgroundcolor: rgb(243, 243, 228);
+    --shadow: 0 8px  24px -2px rgba(37, 54, 69, 0.80);
+    --content-color:  #325674;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
 }
 
 body {
-    font-family: sans-serif;
-    background-color: var(--background);
-    color: var(--text);
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+   font-family: sans-serif;
+   background-color: var(--bodybackgroundcolor);
+   color: var(--text);
+   min-height: 100vh;
 }
 
+
+header .container {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+   max-width: 1400px;
+   width: 100%;
+   margin: 0 auto;
+}
+   
 header {
-    background-color: var(--primary);
-    color: var(--white);
-    position: sticky;
-    top: 0;
+   background-color: var(--primary);
+   color: var(--white);
+   padding: 1.5rem 1rem;
+   display: grid;
+   position: sticky;
+   top: 0;
+   box-shadow: var(--shadow);
+   z-index: 99;    
+   height: 80px;
+}
+header h1 {
+   font-size: 2.5rem;
+   font-weight: 700;
+   margin: 0;
+   white-space: nowrap;
+   justify-self: start;
 }
 
- header .container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem 1rem;
- }
-
- header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0;
-    white-space: nowrap;
-    justify-self: start;
- }
-
- nav {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 2rem;
- }
-
- nav a {
-    background-color: var(--text);
-    border-radius: 5px;
-    padding: 0.3em 1em;
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 400;
-    transition: background 0.2s;
- }
-
- nav a:hover {
-    background: var(--accent);
- }
- form {
-	border: 2px solid var(--color-1);
-	border-radius: 0.4em;
-	padding: 1.3em;
+header h1, a {
+   color: var(--white);
+   text-decoration: none;
 }
 
-.form-field {
-	display: flex;
-	flex-direction: column;
-	margin: 0.5em 0;
-	gap: 0.25em;
+.nav {
+   display: grid;
+   grid-auto-flow: column;
+   justify-content: end;
+   align-items: center;
+   padding: 0 20px;
+   gap: 20px;
 }
+   
+nav a {
+   background-color: var(--text);
+   border-radius: 5px;
+   padding: 0.3em 1em;
+   color: var(--white);
+   display: block;
+   text-decoration: none;
+   font-size: 1.3rem;
+   font-weight: 400;
+   transition: background 0.2s;
+}
+
+nav a:hover {
+   background: var(--accent);
+   transform: scale(1.05);
+   transition: transform 0.2s box-shadow 0.2s;
+}
+
+
+.hero {
+   position: relative;
+   height: 80vh;
+   background: url(../images/ai-conference-scaled.jpg) center / cover no-repeat;
+   box-shadow: var(--shadow);
+}
+.hero-text {
+   color: var(--white);
+   position: absolute;
+   left: 50%;
+   bottom: 10%;
+   top: auto;
+   transform: translateX(-50%);
+   text-align: center;
+   padding-inline: 1rem;
+   font-size: clamp(1rem, 4vw, 2rem);
+}
+
+section h2 {
+   margin-top: 4em;
+}
+.seminar-list, h2, p{
+   display: grid;
+   justify-content: center;
+}
+
+.seminar-list {
+   background-color: var(--content-color);
+   color: var(--white);
+   display: grid;
+   justify-items: center;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+   max-width: 1200px;
+   width: min(100%, 1200px);
+   margin: 2rem auto;
+   padding: 2rem;
+   box-shadow: var(--shadow);
+   border-radius: 4px;
+}
+
+.seminar-card {
+   background-color: rgba(0, 0, 0, 0.596) ; 
+   position: relative;
+   border-radius: 10px;
+   z-index: 0;
+}
+
+.seminar-card::before{
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-color: rgb(48, 46, 47);
+   filter: blur(40px);
+   z-index: -1;
+}
+
+.seminar-list > div {
+   padding: 1rem 1.25rem;
+}
+.seminar-list h3 {
+   margin-bottom: 0.5rem;
+}
+.seminar-list p {
+   line-height: 1.6;
+}
+
+.seminar-list > div:hover {
+   box-shadow: 0 12px 32px -4px rgba(37, 54, 69, 0.25);
+   background-color: rgb(216, 216, 216);
+}
+
+form {
+   background-color: var(--content-color);
+   color: white;
+   border-radius: 10px;
+   padding: 1.3em;
+   margin-left: 50em;
+   margin-right: 50em;
+   display: grid;
+   justify-content: center;
+   gap: 20px;
+   box-shadow: var(--shadow);
+   max-width: 600px;
+   width: min(100%, 600px);
+   margin: 2rem auto;  
+}
+
+.form-row {
+   display: flex;
+   flex-direction: column;
+}
+
 label {
-	font-weight: bold;
+   margin-bottom: 5px;
+   font-weight: bold;
 }
 
+.error-message {
+   display: none;
+}
+
+input:invalid + .error-message {
+   display: block;
+   color: rgb(255, 0, 0);
+   font-style: italic;
+   font-size: small;
+}
 
 input, select, textarea {
 	font-size: var(--form-element-size);
@@ -89,8 +200,63 @@ input, select, textarea {
 	border-radius: 0.5em;
 	padding: 0; 
 } 
-input[type="checkbox"] {
-	width: var(--form-element-size);
-	height: var(--form-element-size);
-}  
+
+button {
+   height: 30px;
+   border-radius: 5px;
+}
+
+button:hover {
+   transform: scale(1.05);
+   transition: transform 0.2s box-shadow 0.2s;
+   background-color: lightblue;
+}
+
+footer {
+   background-color: var(--primary);
+   color: var(--white);
+   height: 5em;
+   display: flex;
+   align-items: center;   
+   justify-content: center;
+   margin-top: 7em;
+}
+footer p {
+   margin: 0; 
+}
+
+
+@media (max-width: 700px) {
+   header .container{
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;   
+   }
+   header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+      white-space: nowrap;
+      justify-self: center;
+}
+}
+
+
+@media (max-width: 900px) {
+   .seminar-list {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+@media (max-width: 600px) {
+   .seminar-list {
+      grid-template-columns: 1fr;
+   }
+   .nav {
+      grid-auto-flow: row;
+      gap: 5px;
+      justify-content: center;
+      align-items: start;
+      text-align: center;
+   }
+}
 
