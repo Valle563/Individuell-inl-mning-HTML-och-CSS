@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="container">
-            <h1> <a href="index.html">Bättre webb</a> </h1>
+            <h1> <a href="index.html">Better Web</a> </h1>
             <nav class="nav">
                 <a href="index.html"> Home </a>
                 <a href="HTML/seminars.html"> Seminars </a>
@@ -80,23 +80,31 @@
         </div>
     </section>
     <section class="register">
-
         <h2> Register </h2>
         <form>
-            <input type="text" id="full-name" name="fullName" placeholder="Jane Doe" autocomplete="name" required>
-            <input type="text" id="adress" name="adress" placeholder="Address" autocomplete="street-address" required>
-            <input type="email" id="email" name="email" placeholder="Jane.Doe@exampel.com" autocomplete="email" required>
+            <div class="form-row">
+                <label for="full-name"> Full name </label>
+                <input type="text" id="full-name" name="fullName" placeholder="Jane Doe" autocomplete="name" required>
+            </div>
+            <div>
+                <label for="Address"> Smalltown, CA 1 </label>
+                <input type="text" id="address" name="address" placeholder="Address" autocomplete="street-address" required>
+            </div>
+            <div>
+                <label for="email"> Email </label>
+                <input type="email" id="email" name="email" placeholder="Jane.Doe@exampel.com" autocomplete="email" required>
+            </div>
             
             <fieldset>
-                <legend> conference days</legend>
-                <label><input type="checkbox" name="conference Days" value="day1"> Day 1</label>
-                <label><input type="checkbox" name="conference Days" value="day2"> Day 2</label>
-                <label><input type="checkbox" name="conference Days" value="day3"> Day 3</label>
+                <legend> Conference days</legend>
+                <label><input type="checkbox" name="conference Days" value="day1"> Day 1 </label>
+                <label><input type="checkbox" name="conference Days" value="day2"> Day 2 </label>
+                <label><input type="checkbox" name="conference Days" value="day3"> Day 3 </label>
             </fieldset>
 
             <fieldset>
                 <legend> Food preference </legend>
-                <label><input type="radio" name="food" value="meat"> Meat</label>
+                <label><input type="radio" name="food" value="meat"> Meat </label>
                 <label><input type="radio" name="food" value="fish"> Fish </label>
                 <label><input type="radio" name="food" value="vegetarian"> Vegetarian </label>
             </fieldset>
@@ -111,7 +119,7 @@
 </main>
 
 <footer class="container">
-    <p>Schoolprojekt 2025</p>
+    <p>School project 2025</p>
 </footer>
 </body>
 </html>
