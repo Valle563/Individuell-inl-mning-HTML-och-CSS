@@ -152,11 +152,6 @@ section h2 {
    line-height: 1.6;
 }
 
-.seminar-list > div:hover {
-   box-shadow: 0 12px 32px -4px rgba(37, 54, 69, 0.25);
-   background-color: rgb(216, 216, 216);
-}
-
 form {
    background-color: var(--content-color);
    color: white;
