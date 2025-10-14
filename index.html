@@ -29,51 +29,51 @@
     <section>
         <h2>Seminars</h2>
         <div class="seminar-list">
-            <div class="seminar-card-1">
+            <div class="seminar-card">
                 <h3>Seminar title 1</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, earum vitae? Provident amet odio quaerat in expedita animi consequatur ex harum. Qui dolores unde hic tenetur, omnis laboriosam quod optio?</p>
             </div>
-            <div class="seminar-card-2">
+            <div class="seminar-card">
                 <h3>Seminar title 2</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque eos. Cumque iusto, in error qui tempora iure totam, fugit natus doloremque reprehenderit molestiae quae inventore quia enim voluptatum suscipit?</p>
             </div>
-            <div class="seminar-card-3">
+            <div class="seminar-card">
                 <h3>Seminar title 3</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere error, pariatur veniam dolor minus dolores, tenetur deleniti illum quia ea hic eos ut! Perspiciatis ab ducimus, necessitatibus quae voluptatem modi.</p>
             </div>
-            <div class="seminar-card-4">
+            <div class="seminar-card">
                 <h3>Seminar title 4</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vel ad at illo debitis dicta, odit optio nulla aliquid est nemo laborum? Velit, minima. Minima amet perferendis fugit iusto quisquam?n</p>
             </div>
-            <div class="seminar-card-5">
+            <div class="seminar-card">
                 <h3>Seminar title 5</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos fugiat doloremque nam animi sapiente magnam quod, laboriosam incidunt amet quas reiciendis corrupti ea inventore? Quos, alias? Natus provident molestiae deserunt?</p>
             </div>
-            <div class="seminar-card-6">
+            <div class="seminar-card">
                 <h3>Seminar title 6</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus quae, accusantium dolores delectus, dolore libero praesentium laboriosam, officiis dolor quasi velit at eveniet incidunt nam inventore quidem saepe aut dolorem!</p>
             </div>
-            <div class="seminar-card-7">
+            <div class="seminar-card">
                 <h3>Seminar title 7</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eos doloribus nisi, culpa cumque neque dicta nostrum sequi modi adipisci. Sint harum suscipit eligendi itaque cum cumque, similique atque optio.</p>
             </div>
-            <div class="seminar-card-8">
+            <div class="seminar-card">
                 <h3>Seminar title 8</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati voluptatum blanditiis velit modi nobis fugiat quasi. Vero quasi dolores magnam dolorum at! Perspiciatis facilis voluptatum veritatis fugit unde soluta consequatur!</p>
             </div>
-            <div class="seminar-card-9">
+            <div class="seminar-card">
                 <h3>Seminar title 9</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusamus, hic eaque quos eius corporis esse officia cupiditate! Fugit architecto asperiores eveniet a quod tenetur quasi optio assumenda id non?</p>
             </div>
-            <div class="seminar-card-10">
+            <div class="seminar-card">
                 <h3>Seminar title 10</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum at necessitatibus vero ab odio harum, quo, id placeat aspernatur accusantium amet dignissimos nam excepturi facilis maiores cumque autem fugit iusto.</p>
             </div>
-            <div class="seminar-card-11">
+            <div class="seminar-card">
                 <h3>Seminar title 11</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptatem nisi error iste consequuntur et neque illo repellendus quasi, adipisci praesentium! Distinctio minima consequatur doloribus accusantium dolores nostrum quasi aliquam.</p>
             </div>
-            <div class="seminar-card-12">
+            <div class="seminar-card">
                 <h3>Seminar title 12</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum earum ut iusto nisi, adipisci nemo doloribus non minus amet ipsum consequatur animi debitis libero quae blanditiis? Alias, porro sunt!</p>
             </div>
@@ -83,16 +83,19 @@
         <h2> Register </h2>
         <form>
             <div class="form-row">
-                <label for="full-name"> Full name </label>
+                <label for="full-name"> Full name* </label>
                 <input type="text" id="full-name" name="fullName" placeholder="Jane Doe" autocomplete="name" required>
+                <span class="error-message"> Enter your full name to continue</span>
             </div>
-            <div>
-                <label for="Address"> Smalltown, CA 1 </label>
-                <input type="text" id="address" name="address" placeholder="Address" autocomplete="street-address" required>
+            <div class="form-row">
+                <label for="Address"> Address* </label>
+                <input type="text" id="address" name="address" placeholder="Smalltown, CA 99999" autocomplete="street-address" required>
+                <span class="error-message"> Enter your address to continue</span>
             </div>
-            <div>
-                <label for="email"> Email </label>
+            <div class="form-row">
+                <label for="email"> Email* </label>
                 <input type="email" id="email" name="email" placeholder="Jane.Doe@exampel.com" autocomplete="email" required>
+                <span class="error-message"> Enter your email to continue</span>
             </div>
             
             <fieldset>
@@ -111,7 +114,7 @@
            
             <div class="form-row">
                 <label for="allergies">Allergies</label>
-                <input type="text" id="allergies" name="allergies">
+                <textarea id="allergies" name="allergies" rows="4" style="width: 100%;" placeholder="List any allergies or dietary restrictions"></textarea>
             </div>
             <button type="submit"> Submit </button>
         </form>
