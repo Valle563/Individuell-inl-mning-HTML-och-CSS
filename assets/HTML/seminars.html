@@ -3,35 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Better web </title>
-    <link rel="stylesheet" href="assets/CSS/index.css">
-    <link rel="stylesheet" href="assets/CSS/register.css">
-    <link rel="stylesheet" href="assets/CSS/seminars.css">
+    <title> Bättre webb </title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/register.css">
+    <link rel="stylesheet" href="../CSS/seminars.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1> <a href="index.html">Better Web</a> </h1>
+            <h1> <a href="../../index.html">Better Web</a> </h1>
             <nav class="nav">
-                <a href="index.html"> Home </a>
-                <a href="assets/HTML/seminars.html"> Seminars </a>
-                <a href="assets/HTML/register.html"> Register </a>
+                <a href="../../index.html"> Home </a>
+                <a href="../HTML/seminars.html"> Seminars </a>
+                <a href="../HTML/register.html"> Register </a>
             </nav>
         </div>
     </header>
     <main>
-    <section class="hero">
-             <div class="hero-text">
-                <h2>Conference</h2>
-                <p class="location"><strong>Göteborg, 17/10-19/10</strong></p>
-             </div>
-    </section>
     <section>
         <h2>Seminars</h2>
         <div class="seminar-list">
             <div class="seminar-card">
                 <h3>Introduction to HTML Structure</h3>
-                <p>Getting Started with HTML – October 17th, 10:00 AM – 11:00 AM, with Sarah Lin. The first seminar introduces the fundamentals of HTML and the structure of a web page. Sarah Lin, a front-end developer at CodeWave with over eight years of experience, will explain how web browsers interpret HTML and how to use essential tags like "html", "head", "body", headings, and paragraphs. Participants will learn to set up their first simple webpage and understand how HTML defines the content and layout of every website.</p>
+                <p>Getting Started with HTML – October 17th, 10:00 AM – 11:00 AM, with Sarah Lin. The first seminar introduces the fundamentals of HTML and the structure of a web page. Sarah Lin, a front-end developer at CodeWave with over eight years of experience, will explain how web browsers interpret HTML and how to use essential tags like "html", "head", "body", headings, and paragraphs. Participants will learn to set up their first simple webpage and understand how HTML defines the content and layout of every website. </p>
             </div>
             <div class="seminar-card">
                 <h3>Understanding HTML Tags & Attributes</h3>
@@ -39,7 +33,7 @@
             </div>
             <div class="seminar-card">
                 <h3>Building a Personal Webpage from Scratch</h3>
-                <p>Building a Personal Webpage from Scratch – October 17th, 2:00 PM – 3:30 PM, with Maria Gonzalez. Maria Gonzalez, a freelance UI designer, will lead a hands-on session where participants create their first personal webpage. She will guide attendees through designing a simple one-page website that includes a profile, bio, and photo while focusing on clean, semantic HTML5 structure. The goal of this workshop is to help beginners gain confidence by building a functional, well-structured page from start to finish.</p>
+                <p>Building a Personal Webpage from Scratch – October 17th, 2:00 PM – 3:30 PM, with Maria Gonzalez. Maria Gonzalez, a freelance UI designer, will lead a hands-on session where participants create their first personal webpage. She will guide attendees through designing a simple one-page website that includes a profile, bio, and photo while focusing on clean, semantic HTML5 structure. The goal of this workshop is to help beginners gain confidence by building a functional, well-structured page from start to finish. </p>
             </div>
             <div class="seminar-card">
                 <h3>Accessibility Basics in HTML</h3>
@@ -78,46 +72,6 @@
                 <p>Mini Project: Responsive Portfolio Page – October 19th, 3:30 PM – 5:00 PM, with Ben Harris. The seminar series concludes with a comprehensive project session led by Ben Harris, a front-end instructor at CodeLaunch. In this final workshop, participants will combine all the skills learned over the previous days to build a fully responsive personal portfolio site. The project will include a header, navigation menu, gallery section, and contact form, styled using Flexbox and Grid. By the end of the session, attendees will have a complete, professional-quality portfolio page they can showcase as proof of their new skills.</p>
             </div>
         </div>
-    </section>
-    <section class="register">
-        <h2> Register </h2>
-        <form>
-            <div class="form-row">
-                <label for="full-name"> Full name* </label>
-                <input type="text" id="full-name" name="fullName" placeholder="Jane Doe" autocomplete="name" required>
-                <span class="error-message"> Enter your full name to continue</span>
-            </div>
-            <div class="form-row">
-                <label for="Address"> Address* </label>
-                <input type="text" id="address" name="address" placeholder="Smalltown, CA 99999" autocomplete="street-address" required>
-                <span class="error-message"> Enter your address to continue</span>
-            </div>
-            <div class="form-row">
-                <label for="email"> Email* </label>
-                <input type="email" id="email" name="email" placeholder="Jane.Doe@exampel.com" autocomplete="email" required>
-                <span class="error-message"> Enter your email to continue</span>
-            </div>
-            
-            <div>
-                <label> Conference days: </label><br>
-                <label><input type="checkbox" name="conference Days" value="day1"> Day 1 </label>
-                <label><input type="checkbox" name="conference Days" value="day2"> Day 2 </label>
-                <label><input type="checkbox" name="conference Days" value="day3"> Day 3 </label>
-            </div>
-
-            <div> 
-                <label> Food preference: </label><br>
-                <label><input type="radio" name="food" value="meat"> Meat </label>
-                <label><input type="radio" name="food" value="fish"> Fish </label>
-                <label><input type="radio" name="food" value="vegetarian"> Vegetarian </label>
-            </div>
-           
-            <div class="form-row">
-                <label for="allergies">Allergies</label>
-                <textarea id="allergies" name="allergies" rows="4" style="width: 100%;" placeholder="List any allergies or dietary restrictions"></textarea>
-            </div>
-            <button type="submit"> Submit </button>
-        </form>
     </section>
 </main>
 
