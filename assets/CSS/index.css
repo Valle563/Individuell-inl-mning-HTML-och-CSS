@@ -243,7 +243,7 @@ footer p {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 1220px) {
    .seminar-list {
       grid-template-columns: repeat(2, 1fr);
    }

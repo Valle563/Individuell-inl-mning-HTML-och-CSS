@@ -1,0 +1,84 @@
+
+:root {
+    --primary: #253645;
+    --background: #f4f6f9;
+    --white: #fff;
+    --text: #253645;
+    --accent: #1a2530;
+    --beige: rgb(245, 245, 220);
+    --bodybackgroundcolor: rgb(243, 243, 228);
+    --shadow: 0 8px  24px -2px rgba(37, 54, 69, 0.80);
+    --content-color:  #325674;
+}
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   font-family: sans-serif;
+   background-color: var(--bodybackgroundcolor);
+   color: var(--text);
+   min-height: 100vh;
+}
+form {
+   background-color: var(--content-color);
+   color: white;
+   border-radius: 10px;
+   padding: 1.3em;
+   margin-left: 50em;
+   margin-right: 50em;
+   display: grid;
+   justify-content: center;
+   gap: 20px;
+   box-shadow: var(--shadow);
+   max-width: 600px;
+   width: min(100%, 600px);
+   margin: 2rem auto;  
+}
+
+.form-row {
+   display: flex;
+   flex-direction: column;
+}
+
+label {
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+.error-message {
+   display: none;
+}
+
+input:invalid + .error-message {
+   display: block;
+   color: #ff6666;
+   font-style: italic;
+   font-size: small;
+   filter: drop-shadow(2px 2px 4px black);
+
+}
+
+input, select, textarea {
+	font-size: var(--form-element-size);
+	padding: 0.8em 1.5em;
+	border-radius: 0.5em;
+} 
+
+button {
+   height: 30px;
+   border-radius: 5px;
+}
+
+button:hover {
+   transform: scale(1.05);
+   transition: transform 0.2s box-shadow 0.2s;
+   background-color: lightblue;
+}
+
+input, textarea {
+   padding-left: 5px;
+}
