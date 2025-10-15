@@ -124,7 +124,7 @@ section h2 {
    margin: 2rem auto;
    padding: 2rem;
    box-shadow: var(--shadow);
-   border-radius: 4px;
+   border-radius: 10px;
 }
 
 .seminar-card {
@@ -185,9 +185,11 @@ label {
 
 input:invalid + .error-message {
    display: block;
-   color: rgb(255, 0, 0);
+   color: #ff6666;
    font-style: italic;
    font-size: small;
+   filter: drop-shadow(2px 2px 4px black);
+
 }
 
 input, select, textarea {
