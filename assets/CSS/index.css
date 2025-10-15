@@ -112,46 +112,6 @@ section h2 {
    justify-content: center;
 }
 
-.seminar-list {
-   background-color: var(--content-color);
-   color: var(--white);
-   display: grid;
-   justify-items: center;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 2rem;
-   max-width: 1200px;
-   width: min(100%, 1200px);
-   margin: 2rem auto;
-   padding: 2rem;
-   box-shadow: var(--shadow);
-   border-radius: 10px;
-}
-
-.seminar-card {
-   background-color: rgba(0, 0, 0, 0.596) ; 
-   position: relative;
-   border-radius: 10px;
-   z-index: 0;
-}
-
-.seminar-card::before{
-   content: "";
-   position: absolute;
-   inset: 0;
-   background-color: rgb(48, 46, 47);
-   filter: blur(40px);
-   z-index: -1;
-}
-
-.seminar-list > div {
-   padding: 1rem 1.25rem;
-}
-.seminar-list h3 {
-   margin-bottom: 0.5rem;
-}
-.seminar-list p {
-   line-height: 1.6;
-}
 
 form {
    background-color: var(--content-color);
@@ -243,15 +203,7 @@ footer p {
 }
 
 
-@media (max-width: 1220px) {
-   .seminar-list {
-      grid-template-columns: repeat(2, 1fr);
-   }
-}
 @media (max-width: 600px) {
-   .seminar-list {
-      grid-template-columns: 1fr;
-   }
    .nav {
       grid-auto-flow: row;
       gap: 5px;
@@ -260,4 +212,4 @@ footer p {
       text-align: center;
    }
 }
-
+ 
