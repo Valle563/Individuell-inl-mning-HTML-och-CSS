@@ -1,0 +1,237 @@
+:root {
+    --primary: #253645;
+    --background: #f4f6f9;
+    --white: #fff;
+    --text: #253645;
+    --accent: #1a2530;
+    --beige: rgb(245, 245, 220);
+    --bodybackgroundcolor: rgb(243, 243, 228);
+    --shadow: 0 8px  24px -2px rgba(37, 54, 69, 0.80);
+    --content-color:  #325674;
+}
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   font-family: sans-serif;
+   background-color: var(--bodybackgroundcolor);
+   color: var(--text);
+   min-height: 100vh;
+}
+
+
+header .container {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   max-width: 1400px;
+   width: 100%;
+   margin: 0 auto;
+}
+   
+header {
+   background-color: var(--primary);
+   padding: 1.5rem 1rem;
+   position: sticky;
+   top: 0;
+   box-shadow: var(--shadow);
+   z-index: 99;    
+}
+header h1 {
+   font-size: 2.5rem;
+   font-weight: 700;
+   white-space: nowrap;
+   justify-self: start;
+}
+
+header h1, a {
+   color: var(--white);
+   text-decoration: none;
+}
+
+.nav {
+   display: grid;
+   grid-auto-flow: column;
+   justify-content: end;
+   align-items: center;
+   padding: 0 20px;
+   gap: 20px;
+}
+   
+nav a {
+   background-color: var(--text);
+   border-radius: 5px;
+   padding: 0.3em 1em;
+   color: var(--white);
+   display: block;
+   text-decoration: none;
+   font-size: 1.3rem;
+   font-weight: 400;
+   transition: background-color 0.5s;
+}
+
+nav a:hover {
+   background-color: var(--accent);
+   transform: scale(1.05);
+   transition: transform 0.2s box-shadow 0.2s;
+}
+
+
+.hero {
+   position: relative;
+   height: 80vh;
+   background: url(../images/ai-conference-scaled.jpg) center / cover no-repeat;
+   box-shadow: var(--shadow);
+}
+.hero-text {
+   color: var(--white);
+   position: absolute;
+   left: 50%;
+   bottom: 10%;
+   top: auto;
+   transform: translateX(-50%);
+   text-align: center;
+   padding-inline: 1rem;
+   font-size: clamp(1rem, 4vw, 2rem);
+}
+
+section h2 {
+   margin-top: 4em;
+   font-size: 2em;
+}
+.seminar-list, h2, p{
+   display: grid;
+   justify-content: center;
+}
+
+
+form {
+   background-color: var(--content-color);
+   color: white;
+   border-radius: 10px;
+   padding: 1.3em;
+   margin-left: 50em;
+   margin-right: 50em;
+   display: grid;
+   justify-content: center;
+   gap: 20px;
+   box-shadow: var(--shadow);
+   max-width: 600px;
+   width: min(100%, 600px);
+   margin: 2rem auto;  
+}
+
+.form-row {
+   display: flex;
+   flex-direction: column;
+}
+
+label {
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+.error-message {
+   display: none;
+}
+
+input:invalid + .error-message {
+   display: block;
+   color: #ff6666;
+   font-style: italic;
+   font-size: small;
+   filter: drop-shadow(2px 2px 4px black);
+
+}
+
+input, select, textarea {
+	font-size: var(--form-element-size);
+	padding: 0.8em 1.5em;
+	border-radius: 0.5em;
+} 
+
+h3 {
+   padding-bottom: 5px;
+}
+.radio-and-checkbox {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 20px;
+
+   input {
+      width: 20px;
+      height: 20px;
+   }
+   & > div{
+      display: flex;
+      align-items: center;
+   }
+   label {
+      gap: 5px;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+button {
+   height: 30px;
+   border-radius: 5px;
+}
+
+button:hover {
+   transform: scale(1.05);
+   transition: transform 0.2s box-shadow 0.2s;
+   background-color: lightblue;
+}
+
+input, textarea {
+   padding-left: 5px;
+}
+
+footer {
+   background-color: var(--primary);
+   color: var(--white);
+   height: 5em;
+   display: flex;
+   align-items: center;   
+   justify-content: center;
+   margin-top: 7em;
+}
+footer p {
+   margin: 0; 
+}
+
+
+@media (max-width: 700px) {
+   header .container{
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;   
+   }
+   header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+      white-space: nowrap;
+      justify-self: center;
+}
+}
+
+
+@media (max-width: 600px) {
+   .nav {
+      grid-auto-flow: row;
+      gap: 5px;
+      justify-content: center;
+      align-items: start;
+      text-align: center;
+   }
+}
+ 
