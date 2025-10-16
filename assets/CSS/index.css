@@ -70,11 +70,11 @@ nav a {
    text-decoration: none;
    font-size: 1.3rem;
    font-weight: 400;
-   transition: background 0.2s;
+   transition: background-color 0.5s;
 }
 
 nav a:hover {
-   background: var(--accent);
+   background-color: var(--accent);
    transform: scale(1.05);
    transition: transform 0.2s box-shadow 0.2s;
 }
@@ -152,6 +152,33 @@ input, select, textarea {
 	padding: 0.8em 1.5em;
 	border-radius: 0.5em;
 } 
+
+h3 {
+   padding-bottom: 5px;
+}
+.radio-and-checkbox {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 20px;
+
+   input {
+      width: 20px;
+      height: 20px;
+   }
+   & > div{
+      display: flex;
+      align-items: center;
+   }
+   label {
+      gap: 5px;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
 
 button {
    height: 30px;
