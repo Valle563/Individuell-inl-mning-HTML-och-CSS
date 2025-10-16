@@ -23,12 +23,6 @@ body {
    min-height: 100vh;
 }
 
-.seminar-card {
-   background-color: rgba(0, 0, 0, 0.596) ; 
-   position: relative;
-   border-radius: 10px;
-   z-index: 0;
-}
 
 .seminar-card::before{
    content: "";
@@ -43,3 +37,47 @@ body {
    box-shadow: 0 12px 32px -4px rgba(37, 54, 69, 0.25);
    background-color: rgb(165, 164, 164);
 }
+
+
+.seminar-list {
+   background-color: var(--content-color);
+   color: var(--white);
+   border-radius: 10px;
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 2em;
+   justify-self: center;
+   max-width: 1200px;
+   position: relative;
+   padding: 2em;
+}
+.seminar-card {
+   background-color: rgba(0, 0, 0, 0.596) ; 
+   position: relative;
+   border-radius: 10px;
+   z-index: 0;
+   max-width: 310px;
+   padding: 2em;
+}
+
+.seminar-list p {
+   line-height: 1.6;
+}
+
+@media (min-width: 800px) {
+   .seminar-list {
+      grid-template-columns: repeat(2, 1fr);
+   }
+} 
+
+@media (min-width: 1300px) {
+   .seminar-list {
+      grid-template-columns: repeat(3, 1fr);
+   } 
+}
+@media (max-width: 380px) {
+   .seminar-list {
+      padding: 0;
+   } 
+}
+

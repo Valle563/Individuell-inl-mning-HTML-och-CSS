@@ -27,7 +27,6 @@ body {
 header .container {
    display: grid;
    grid-template-columns: auto 1fr;
-   align-items: center;
    max-width: 1400px;
    width: 100%;
    margin: 0 auto;
@@ -35,19 +34,15 @@ header .container {
    
 header {
    background-color: var(--primary);
-   color: var(--white);
    padding: 1.5rem 1rem;
-   display: grid;
    position: sticky;
    top: 0;
    box-shadow: var(--shadow);
    z-index: 99;    
-   height: 80px;
 }
 header h1 {
    font-size: 2.5rem;
    font-weight: 700;
-   margin: 0;
    white-space: nowrap;
    justify-self: start;
 }
@@ -75,11 +70,11 @@ nav a {
    text-decoration: none;
    font-size: 1.3rem;
    font-weight: 400;
-   transition: background 0.2s;
+   transition: background-color 0.5s;
 }
 
 nav a:hover {
-   background: var(--accent);
+   background-color: var(--accent);
    transform: scale(1.05);
    transition: transform 0.2s box-shadow 0.2s;
 }
@@ -112,46 +107,6 @@ section h2 {
    justify-content: center;
 }
 
-.seminar-list {
-   background-color: var(--content-color);
-   color: var(--white);
-   display: grid;
-   justify-items: center;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 2rem;
-   max-width: 1200px;
-   width: min(100%, 1200px);
-   margin: 2rem auto;
-   padding: 2rem;
-   box-shadow: var(--shadow);
-   border-radius: 10px;
-}
-
-.seminar-card {
-   background-color: rgba(0, 0, 0, 0.596) ; 
-   position: relative;
-   border-radius: 10px;
-   z-index: 0;
-}
-
-.seminar-card::before{
-   content: "";
-   position: absolute;
-   inset: 0;
-   background-color: rgb(48, 46, 47);
-   filter: blur(40px);
-   z-index: -1;
-}
-
-.seminar-list > div {
-   padding: 1rem 1.25rem;
-}
-.seminar-list h3 {
-   margin-bottom: 0.5rem;
-}
-.seminar-list p {
-   line-height: 1.6;
-}
 
 form {
    background-color: var(--content-color);
@@ -198,6 +153,33 @@ input, select, textarea {
 	border-radius: 0.5em;
 } 
 
+h3 {
+   padding-bottom: 5px;
+}
+.radio-and-checkbox {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 20px;
+
+   input {
+      width: 20px;
+      height: 20px;
+   }
+   & > div{
+      display: flex;
+      align-items: center;
+   }
+   label {
+      gap: 5px;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
 button {
    height: 30px;
    border-radius: 5px;
@@ -243,15 +225,7 @@ footer p {
 }
 
 
-@media (max-width: 900px) {
-   .seminar-list {
-      grid-template-columns: repeat(2, 1fr);
-   }
-}
 @media (max-width: 600px) {
-   .seminar-list {
-      grid-template-columns: 1fr;
-   }
    .nav {
       grid-auto-flow: row;
       gap: 5px;
@@ -260,4 +234,4 @@ footer p {
       text-align: center;
    }
 }
-
+ 
