@@ -23,12 +23,6 @@ body {
    min-height: 100vh;
 }
 
-/* .seminar-card {
-   background-color: rgba(0, 0, 0, 0.596) ; 
-   position: relative;
-   border-radius: 10px;
-   z-index: 0;
-} */
 
 .seminar-card::before{
    content: "";
@@ -48,14 +42,12 @@ body {
 .seminar-list {
    background-color: var(--content-color);
    color: var(--white);
-   /* box-shadow: var(--shadow); */
    border-radius: 10px;
    display: grid;
    grid-template-columns: 1fr;
    gap: 2em;
    justify-self: center;
    max-width: 1200px;
-   /* width: 100%; */
    position: relative;
    padding: 2em;
 }
